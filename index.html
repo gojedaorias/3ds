@@ -185,6 +185,7 @@
         align-items: center;
         width: 616px;
         justify-content: space-between;
+         margin-bottom: 60px;
     }
 
     .boton {
@@ -353,30 +354,23 @@
             width: 310px;
         }
     }
-   @media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 2) {
 
-    .tarjeta {
-            width: 310px;
-        }
 
-        .tarjeta__input {
-            width: 16% !important;
-            height: 16%!important;
-        }
+    @media only screen
+	and (min-device-width: 375px)
+	and (max-device-width: 812px)
+	and (-webkit-min-device-pixel-ratio: 2) {
 
-        .botones {
-            width: 310px;
-            margin-bottom: 60px;
-        }
+	.tarjeta__input {
+	width: 16% !important;
+	height: 16%!important;
+	}
 
-        .modal {
-            width: 310px;
-        }
-}
-
+	.botones {
+	width: 310px;
+	margin-bottom: 60px;
+	}
+	}
 
 </style>
 <section class="contenedor-tarjeta tarjeta--google-authenticator">
@@ -392,21 +386,20 @@
             <div class="tarjeta__contenedor-texto">
                 <p class="tarjeta__texto tarjeta__texto--bold">Monto:</p>
                 <p class="tarjeta__texto tarjeta__texto--bold">$
-                    #if(${exchange.properties.moneda})${exchange.properties.moneda}#end
-                    #if(${exchange.properties.monto})${exchange.properties.monto}#end</p>
+                    EUR                    20,00</p>
             </div>
             <div class="tarjeta__contenedor-texto">
                 <p class="tarjeta__texto">Comercio:</p>
-                <p class="tarjeta__texto">#if(${exchange.properties.comercio})${exchange.properties.comercio}#end</p>
+                <p class="tarjeta__texto">Merchant MC</p>
             </div>
             <div class="tarjeta__contenedor-texto">
                 <p class="tarjeta__texto">Tarjeta:</p>
                 <p class="tarjeta__texto">****
-                    #if(${exchange.properties.accountNumber})${exchange.properties.accountNumber}#end</p>
+                    8966</p>
             </div>
             <div class="tarjeta__contenedor-texto">
                 <p class="tarjeta__texto">Fecha:</p>
-                <p class="tarjeta__texto">#if(${exchange.properties.fechaHoy})${exchange.properties.fechaHoy}#end</p>
+                <p class="tarjeta__texto">24-05-2023</p>
             </div>
         </div>
         <div class="tarjeta__otp">
@@ -415,7 +408,7 @@
                  alt="Google Authenticator"/>
             <h2 class="tarjeta__otp-titulo">Google Authenticator</h2>
             <p class="tarjeta__otp-texto"> Ingresa tu segunda clave de autenticación para autorizar la compra.</p>
-            <form method="POST" action="#if(${exchange.properties.url})${exchange.properties.url}#end" id="formAuthenticator">
+            <form method="POST" action="xxxx" id="formAuthenticator">
                 <div class="tarjeta__input-otp">
                     <label class="tarjeta__label">Código de 6 digitos</label>
                     <input maxlength="1" type="number" id="cor1" class="tarjeta__input "/>
@@ -424,12 +417,12 @@
                     <input maxlength="1" type="number" id="cor4" class="tarjeta__input "/>
                     <input maxlength="1" type="number" id="cor5" class="tarjeta__input "/>
                     <input maxlength="1" type="number" id="cor6" class="tarjeta__input"/>
-                    <input maxlength="7" type="hidden" id="desafio1" name="desafio"/>
+                    <input maxlength="6" type="hidden" id="desafio1" name="desafio"/>
                 </div>
                 <div id="contador"></div>
                 <p class='tarjeta__mensaje-error'></p>
                 <p class='tarjeta__mensaje-contador'></p>
-                <input type="hidden" id="url" value="#if(${exchange.properties.url})${exchange.properties.url}#end">
+                <input type="hidden" id="url" value="xxxx">
             </form>
         </div>
 
